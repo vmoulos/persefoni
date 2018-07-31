@@ -1,0 +1,18 @@
+{
+   "Geo_Location":{
+      "latitude":37.94745,
+      "longitude":23.63708
+   },
+   "Network_Locality":"internal",
+   "Virtual_Entity":"Infrastructure",
+   "Resource_Identifier":"R1",
+   "Type":"datastore",
+   "Details":{
+      "Database_Type":"MongoDB",
+      "Data_Collection":"e22"
+   },
+   "Operational_Period":{
+      "from":"09:00:00",
+      "until":"17:00:00"
+   }
+}

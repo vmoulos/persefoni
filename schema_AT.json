@@ -1,0 +1,98 @@
+{
+   "$schema":"http://json-schema.org/draft-04/schema#",
+   "oneOf":[
+      {
+         "type":"object",
+         "description":"the JSON schema for the computational nodes",
+         "properties":{
+            "DoF":{
+               "type":"string",
+               "description":"textual description of the functionality that the AT implements"
+            },
+            "API":{
+               "description":"the interface of the AT which is used to identify the possible interconnections (edges in the Abstract Graph) of this AT with other ATs"
+            },
+            "TLS":{
+               "type":"boolean",
+               "description":"indicates whether the AT complies with encryption/security guidelines or not"
+            },
+            "Type":{
+               "enum":[
+                  "computational"
+               ]
+            },
+            "Details":{
+               "type":"object",
+               "description":"Details regarding the computational nodes",
+               "properties":{
+                  "Instance_Type":{
+                     "type":"string",
+                     "description":"The types of computational nodes follow the Amazon EC2 instance type paradigm"
+                  }
+               },
+               "required":[
+                  "Instance_Type"
+               ],
+               "additionalProperties":false
+            }
+         },
+         "required":[
+            "DoF",
+            "API",
+            "TLS",
+            "Type",
+            "Details"
+         ],
+         "additionalProperties":false
+      },
+      {
+         "type":"object",
+         "description":"the JSON schema for the datastore nodes",
+         "properties":{
+            "DoF":{
+               "type":"string",
+               "description":"textual description of the functionality that the AT implements"
+            },
+            "API":{
+               "description":"the interface of the AT which is used to identify the possible interconnections (edges in the Abstract Graph) of this AT with other ATs"
+            },
+            "TLS":{
+               "type":"boolean",
+               "description":"indicates whether the AT complies with encryption/security guidelines or not"
+            },
+            "Type":{
+               "enum":[
+                  "datastore"
+               ]
+            },
+            "Details":{
+               "type":"object",
+               "description":"Details regarding the datastore nodes",
+               "properties":{
+                  "Database_Type":{
+                     "type":"string",
+                     "description":"a value to define the type of the data source to be accessed by the AT"
+                  },
+                  "Data_Collection":{
+                     "type":"string",
+                     "description":"a value to define the specific collection of data to be accessed by the AT"
+                  }
+               },
+               "required":[
+                  "Database_Type",
+                  "Data_Collection"
+               ],
+               "additionalProperties":false
+            }
+         },
+         "required":[
+            "DoF",
+            "API",
+            "TLS",
+            "Type",
+            "Details"
+         ],
+         "additionalProperties":false
+      }
+   ]
+}

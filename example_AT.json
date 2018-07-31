@@ -1,0 +1,18 @@
+{
+   "DoF":"Get the average age of all the employees of the CI",
+   "API":{
+      "input":null,
+      "output":"number"
+   },
+   "TLS":true,
+   "Type":"datastore",
+   "Details":{
+      "Database_Type":"MongoDB",
+      "Data_Collection":"e22"
+   }
+}
+
+
+
+
+
